@@ -1,29 +1,9 @@
 # zheng-ui
 
-## Project setup
-```
-yarn install
-```
+## 一套基于vue2.0的组件库
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+前端小白写来练习的， 请勿在生产环境中使用
+可以前往npm 下载包
+npm i zheng-ui --save
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+组件和文档都待完成~
