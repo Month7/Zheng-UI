@@ -1,6 +1,6 @@
 {
   "name": "zheng-ui",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "private": false,
   "main": "./dist/zheng-ui.common.js",
   "files": [
@@ -8,7 +8,8 @@
     "src/*",
     "public/*",
     "*.json",
-    "*.js"
+    "*.js",
+    "*.css"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -19,7 +20,7 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
+    "core-js": "^2.6.9",
     "vue": "^2.6.10"
   },
   "devDependencies": {

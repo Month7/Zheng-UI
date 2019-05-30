@@ -24,13 +24,11 @@ export default {
     allowed(){
       switch(this.disabled){
         case true: return 'not-allowed';
-        case false: return ''
+        case false: return '';
+        default: return '';
       }
     }
   },
-  mounted(){
-    console.log(this.props);
-  }
 }
 </script>
 <style>
@@ -42,6 +40,9 @@ export default {
   padding: 6px 12px;
   cursor: pointer;
   margin: 4px;
+}
+.button:hover{
+  opacity: .9;
 }
 .not-allowed{
   cursor: not-allowed;

@@ -14,7 +14,6 @@ import Zcard from './components/z-card';
 export default {
   name: 'app',
   components: {
-    Example,
     Zcard
   }
 }

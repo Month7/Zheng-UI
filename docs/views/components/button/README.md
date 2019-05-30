@@ -1,8 +1,8 @@
 ---
 title: 'Button组件'
-sidebarDepth: 1
+
 ---
-## Button按钮
+## Button组件
 <ClientOnly>
 <z-buttons/>
 </ClientOnly>
