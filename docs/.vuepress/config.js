@@ -30,7 +30,8 @@ module.exports = {
         collapsable: true,
         children: [
           'views/components/button/',
-          'views/components/carousel/'
+          'views/components/carousel/',
+          'views/components/datetimepicker/'
         ]
       }
     ]

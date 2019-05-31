@@ -61,7 +61,6 @@ export default {
         <z-button type="warn" disabled>警告按钮</z-button>
         <z-button type="danger" disabled>危险按钮</z-button>
         `,
-      
     }
   }
 }
