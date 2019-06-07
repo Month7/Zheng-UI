@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="button" :class="[childType,allowed]" ><slot></slot></button>
+    <button class="button" @click="emitClick" :class="[childType,allowed]" ><slot></slot></button>
   </div>
 </template>
 <script>
@@ -9,6 +9,14 @@ export default {
   props: {
     type: String,
     disabled: Boolean
+  },
+  methods:{
+    emitClick(){
+      if(this.disabled){
+        return false;
+      } 
+      this.$emit('click')
+    }
   },
   computed:{
     childType() {

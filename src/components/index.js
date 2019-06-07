@@ -1,12 +1,29 @@
 import Vue from 'vue';
 import zButton from './z-button';
+import zCarousel from './z-carousel';
+import zDatetimepicker from './z-datetimepicker';
 
 const Components = {
-  'z-button': zButton
+  'z-button': zButton,
+  'z-carousel': zCarousel,
+  'z-datetimepicker': zDatetimepicker
 }
 
-Object.keys(Components).forEach(name => {
-  Vue.component(name,Components[name])
-})
+// 判断是否是直接引入文件
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue)
+}
 
-export default Components
+const install = function (Vue) {
+  if(install.installed) return;
+  Object.keys(Components).forEach(name => {
+    Vue.component(name,Components[name])
+  })
+}
+
+export default {
+  install,
+  zButton,
+  zCarousel,
+  zDatetimepicker
+}

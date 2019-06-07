@@ -1,7 +1,7 @@
 ---
-title: 'carousel 轮播图'
+title: 'Carousel 轮播图'
 ---
-## carousel 轮播图
+## Carousel 轮播图
 <ClientOnly>
 <carousel />
 </ClientOnly>

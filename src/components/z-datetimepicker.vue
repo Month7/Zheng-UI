@@ -62,7 +62,6 @@ export default {
       this.panelShow = !this.panelShow;
     },
     setDate(){
-      
       // 获取这个月第一天是星期几  42
       let firstDay = new Date(this.curYear, this.curMonth-1,1).getDay();
       var arr = [];

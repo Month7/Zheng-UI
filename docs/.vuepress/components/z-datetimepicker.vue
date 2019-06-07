@@ -27,7 +27,7 @@ export default {
   },
   data(){
     return {
-      time: new Date('2019-05-05'),
+      time: '2019-05-05',
       code1: `
         <z-datetimepicker v-model="time"></z-datetimepicker>
         export default {
