@@ -31,6 +31,9 @@ export default {
       }
     },
     updateSelected(value){
+      // var value2 = this.selectValue.split('').push(value).join('')
+      
+      
       this.$emit('updateSelected',value)
     }
   },
@@ -51,6 +54,9 @@ export default {
         return 'cascader-active-item'
       }
       return '';
+    },
+    selectdValue(value){
+      return this.selectValue.split('').push(value).join('')
     }
   }
 }

@@ -2,6 +2,11 @@
   <div class="container">
     <z-card>
      <z-cascader :options="options" v-model="selected"></z-cascader>
+     <template v-slot:code>
+        <highlight-code>
+          {{code}}
+		    </highlight-code>
+      </template>
     </z-card>
   </div>
 </template>

@@ -32,7 +32,8 @@ module.exports = {
           'views/components/button/',
           'views/components/carousel/',
           'views/components/datetimepicker/',
-          'views/components/cascader/'
+          'views/components/cascader/',
+          'views/components/infinitescroll/'
         ]
       }
     ]

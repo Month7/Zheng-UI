@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <div class="container" ref="carouselDom">
     <div class="z-carousel">
       <!--底部操作button-->
       <div class="carousel-btns">
         <div v-for="(item,index) in list" :key="index" :class="index==currentIndex?'index-active':''" @click="changeIndex(index)">
-          &nbsp
+          
         </div>
       </div>
       <slot></slot>
@@ -12,20 +12,34 @@
   </div>
 </template>
 <script>
+import { setTimeout, setInterval, clearInterval } from 'timers';
+
 export default {
   name: 'z-carousel',
+  props: {
+    autoPlay: Boolean
+  },
   data(){
     return {
       list: [],
-      imgs: [
-        '/1.png',
-        '/2.png'
-      ],
+      timer: null,
       currentIndex: 0
     }
   },
   mounted(){
     this.getSlideList();
+    if(this.autoPlay) this.playAutomatically();
+    this.$refs.carouselDom.addEventListener('mouseenter',() => {
+      if(this.timer) {
+        clearInterval(this.timer)
+      }
+    })
+    this.$refs.carouselDom.addEventListener('mouseleave',() => {
+      if(this.autoPlay) this.playAutomatically();
+    })
+  },
+  beforeDestroy(){
+    // clearInterval(timer)
   },
   methods: {
     startSlide(){
@@ -36,6 +50,16 @@ export default {
     },
     nextImg(){
 
+    },
+    playAutomatically(){
+      if(this.timer) {
+        clearInterval(this.timer);
+      }
+      this.timer = setInterval(()=>{
+        var index = this.currentIndex + 1;
+        if(index > this.$children.length-1) index = 0;
+        this.changeIndex(index)  
+        },2000)
     },
     // 改变显示的index
     changeIndex(index){
