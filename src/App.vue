@@ -8,6 +8,7 @@
 </template>
 
 <script>
+
 import Example from './components/Example.vue'
 import Zcard from './components/z-card';
 
@@ -15,7 +16,7 @@ export default {
   name: 'app',
   components: {
     Zcard
-  }
+  },
 }
 </script>
 
