@@ -33,7 +33,8 @@ module.exports = {
           'views/components/carousel/',
           'views/components/datetimepicker/',
           'views/components/cascader/',
-          'views/components/infinitescroll/'
+          'views/components/infinitescroll/',
+          'views/components/tabs/'
         ]
       }
     ]
