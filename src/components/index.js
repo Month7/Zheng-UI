@@ -11,13 +11,22 @@ const Components = {
 
 // 判断是否是直接引入文件
 if (typeof window !== 'undefined' && window.Vue) {
+  console.log('!!');
   install(window.Vue)
 }
 
-const install = function (Vue) {
+const install = function (vue) {
+  console.log('执行install')
+  vue.wtf = () => {
+    console.log('$alert?');
+  } 
+  vue.prototype.$modal = () => {
+    console.log('$alert!');
+  }
+  console.log(vue.prototype.$modal);
   if(install.installed) return;
   Object.keys(Components).forEach(name => {
-    Vue.component(name,Components[name])
+    vue.component(name,Components[name])
   })
 }
 

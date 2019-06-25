@@ -34,7 +34,8 @@ module.exports = {
           'views/components/datetimepicker/',
           'views/components/cascader/',
           'views/components/infinitescroll/',
-          'views/components/tabs/'
+          'views/components/tabs/',
+          'views/components/modal/'
         ]
       }
     ]
