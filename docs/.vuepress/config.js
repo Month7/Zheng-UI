@@ -35,7 +35,8 @@ module.exports = {
           'views/components/cascader/',
           'views/components/infinitescroll/',
           'views/components/tabs/',
-          'views/components/modal/'
+          'views/components/modal/',
+          'views/components/toast/'
         ]
       }
     ]

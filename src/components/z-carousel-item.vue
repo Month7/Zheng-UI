@@ -23,7 +23,6 @@ export default {
   transition: all 1s;
 }
 .fade-leave-active{
-
   position: absolute;
   left: 0;
   top: 0;
