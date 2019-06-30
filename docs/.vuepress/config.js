@@ -36,7 +36,8 @@ module.exports = {
           'views/components/infinitescroll/',
           'views/components/tabs/',
           'views/components/modal/',
-          'views/components/toast/'
+          'views/components/toast/',
+          'views/components/rate/'
         ]
       }
     ]

@@ -2,11 +2,17 @@ import Vue from 'vue';
 import zButton from './z-button';
 import zCarousel from './z-carousel';
 import zDatetimepicker from './z-datetimepicker';
+import zInfinitescroll from './z-infinitescroll';
+import zRate from './z-rate';
+import zTab from './z-tab/z-tab'
 
 const Components = {
   'z-button': zButton,
   'z-carousel': zCarousel,
-  'z-datetimepicker': zDatetimepicker
+  'z-datetimepicker': zDatetimepicker,
+  'z-infinitescroll': zInfinitescroll,
+  'z-rate': zRate,
+  'z-tab': zTab
 }
 
 // 判断是否是直接引入文件
@@ -16,15 +22,34 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 const install = function (vue) {
-  console.log('执行install')
-  vue.wtf = () => {
-    console.log('$alert?');
-  } 
-  vue.prototype.$modal = () => {
-    console.log('$alert!');
-  }
-  console.log(vue.prototype.$modal);
   if(install.installed) return;
+  // toast
+
+  var toast;
+  Vue.prototype.$toast = (option) => {
+    var Constructor = Vue.extend(zToast);
+    if(toast) toast.close();
+    toast = new Constructor({propsData:option});
+
+    toast.$mount();
+    document.body.appendChild(toast.$el)
+  }
+
+  var jsonOption;
+  var modal;
+  Vue.prototype.$modal = (option) => {
+    
+    if(jsonOption !== JSON.stringify(option)) {
+      const Constructor = Vue.extend(zModal)
+      modal = new Constructor({propsData:option});
+      modal.$mount();
+      document.body.appendChild(modal.$el);
+    }
+    modal.visable = true;
+    jsonOption = JSON.stringify(option);
+  }
+
+  
   Object.keys(Components).forEach(name => {
     vue.component(name,Components[name])
   })
@@ -34,5 +59,7 @@ export default {
   install,
   zButton,
   zCarousel,
-  zDatetimepicker
+  zDatetimepicker,
+  zInfinitescroll,
+  zRate
 }
