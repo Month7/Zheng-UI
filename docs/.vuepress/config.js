@@ -38,7 +38,8 @@ module.exports = {
           'views/components/modal/',
           'views/components/toast/',
           'views/components/rate/',
-          'views/components/backtop/'
+          'views/components/backtop/',
+          'views/components/steps/'
         ]
       }
     ]
