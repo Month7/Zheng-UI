@@ -37,7 +37,8 @@ module.exports = {
           'views/components/tabs/',
           'views/components/modal/',
           'views/components/toast/',
-          'views/components/rate/'
+          'views/components/rate/',
+          'views/components/backtop/'
         ]
       }
     ]

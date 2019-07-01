@@ -4,7 +4,8 @@ import zCarousel from './z-carousel';
 import zDatetimepicker from './z-datetimepicker';
 import zInfinitescroll from './z-infinitescroll';
 import zRate from './z-rate';
-import zTab from './z-tab/z-tab'
+import zTab from './z-tab/z-tab';
+import zBacktop from './z-backtop';
 
 const Components = {
   'z-button': zButton,
@@ -12,7 +13,8 @@ const Components = {
   'z-datetimepicker': zDatetimepicker,
   'z-infinitescroll': zInfinitescroll,
   'z-rate': zRate,
-  'z-tab': zTab
+  'z-tab': zTab,
+  'z-backtop': zBacktop
 }
 
 // 判断是否是直接引入文件
@@ -61,5 +63,6 @@ export default {
   zCarousel,
   zDatetimepicker,
   zInfinitescroll,
-  zRate
+  zRate,
+  zBacktop
 }
