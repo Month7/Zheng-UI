@@ -3,9 +3,11 @@
     <input type="text" class="date-input" v-model="dateValue" @click="showPanel">
     <div class="panel" v-show="panelShow" @click="prevent">
       <div class="panel-header">
+        <span class="panel-arrow" @click="previousYear"><<</span>
         <span class="panel-arrow" @click="previousMonth"><</span>
-        {{curMonth}}月
+        {{curYear}}年 {{curMonth}}月
         <span class="panel-arrow" @click="nextMonth">></span>
+        <span class="panel-arrow" @click="nextYear">>></span>
       </div>
       <div class="panel-content">
         <div v-for="item in weekList" :key="item.index" class="panel-tr">{{item}}</div>
@@ -101,6 +103,14 @@ export default {
       // this.dateValue = new Date(this.curYear,month,day).toDateString();
       this.panelShow = false;
     },
+    nextYear(){
+      this.curYear++;
+      this.setDate();
+    },
+    previousYear(){
+      this.curYear--;
+      this.setDate();
+    },
     nextMonth(){
       this.curMonth++;
       this.setDate();
@@ -175,6 +185,7 @@ export default {
 }
 .panel-arrow{
   cursor: pointer;
+  margin: 0 10px;
 }
 .date-input{
   height: 32px;
