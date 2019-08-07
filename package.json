@@ -17,7 +17,8 @@
     "lint": "vue-cli-service lint",
     "build-z": "vue-cli-service build --target lib --name zheng-ui ./src/components/index.js",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "start": "vuepress dev docs"
   },
   "dependencies": {
     "core-js": "^2.6.9",

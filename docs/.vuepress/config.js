@@ -39,7 +39,8 @@ module.exports = {
           'views/components/toast/',
           'views/components/rate/',
           'views/components/backtop/',
-          'views/components/steps/'
+          'views/components/steps/',
+          'views/components/progress/'
         ]
       }
     ]
