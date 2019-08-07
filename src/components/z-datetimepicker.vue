@@ -103,6 +103,7 @@ export default {
       this.panelShow = false;
     },
     nextYear(){
+     
       this.curYear++;
       this.setDate();
     },
@@ -111,10 +112,12 @@ export default {
       this.setDate();
     },
     nextMonth(){
+      if(this.curMonth >= 12) return
       this.curMonth++;
       this.setDate();
     },
     previousMonth(){
+      if(this.curMonth <= 0) return
       this.curMonth--;
       this.setDate();
     }
