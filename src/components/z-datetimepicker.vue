@@ -117,7 +117,7 @@ export default {
       this.setDate();
     },
     previousMonth(){
-      if(this.curMonth <= 0) return
+      if(this.curMonth <= 1) return
       this.curMonth--;
       this.setDate();
     }
