@@ -9,7 +9,11 @@
         <z-button type="primary" @click="addProgress">+</z-button>
         <z-button type="warn" @click="subProgress">-</z-button>
       </div>
-      
+      <template v-slot:code>
+        <highlight-code>
+          {{code1}}
+		    </highlight-code>
+      </template>
     </z-card>
   </div>
 </template>
@@ -42,17 +46,31 @@ export default {
       strokeWidth: 220,
       code1: `
         <template>
-          <div style="display:flex">
-            <z-button type="primary" @click="showModal">点我</z-button>
-          </div> 
+          <div>
+            <z-progress 
+              :percentage="percentage" 
+              :strokeWidth="strokeWidth"
+            >
+            </z-progress>
+            <div style="display:flex">
+              <z-button type="primary" @click="addProgress">+</z-button>
+              <z-button type="warn" @click="subProgress">-</z-button>
+            </div>
+          </div>
         </template>
         export default{
+          data(){
+            return {
+              percentage: 0,
+              strokeWidth: 220
+            }
+          },
           methods:{
-            showModal(){
-              this.$modal({
-                title: '这是一个title',
-                content: '这是content',
-              });
+            addProgress() {
+              this.percentage += 10;
+            },
+            subProgress() {
+              this.percentage -= 10;
             }
           },
         }
