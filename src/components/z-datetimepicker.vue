@@ -128,9 +128,6 @@ export default {
     this.curMonth = today.getMonth() + 1;
     this.curYear = today.getFullYear();
     this.setDate();
-  },
-  computed:{
-
   }
 }
 </script>

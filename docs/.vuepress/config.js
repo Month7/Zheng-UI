@@ -41,7 +41,8 @@ module.exports = {
           'views/components/backtop/',
           'views/components/steps/',
           'views/components/progress/',
-          'views/components/magnifying/'
+          'views/components/magnifying/',
+          'views/components/select/'
         ]
       }
     ]
