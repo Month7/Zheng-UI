@@ -12,3 +12,4 @@ title: 'Select 选择框'
 | v-model | 绑定值 | boolean / string / number |- | - |
 | value | 绑定值 | boolean / string / number | - | - |
 | label | 绑定值 | boolean / string / number |- | - |
+| disabled | 是否禁用 | boolean |- | false |
