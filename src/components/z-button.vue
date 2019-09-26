@@ -81,4 +81,15 @@ export default {
   background-color: #e6a23c;
   border-color: #e6a23c;
 }
+@media screen and (max-width: 768px){
+  .button{
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 16px;
+    cursor: pointer;
+    margin: 4px;
+    }
+}
 </style>

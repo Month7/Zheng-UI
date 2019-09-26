@@ -42,7 +42,8 @@ module.exports = {
           'views/components/steps/',
           'views/components/progress/',
           'views/components/magnifying/',
-          'views/components/select/'
+          'views/components/select/',
+          'views/components/layout/'
         ]
       }
     ]

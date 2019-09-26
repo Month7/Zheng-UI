@@ -2,7 +2,7 @@
   <div class="container">
     <h3>基础用法</h3>
     <z-card>
-      <div style="display:flex">
+      <div class="btn-group">
         <z-button type="primary" @click="test">主要按钮</z-button>
         <z-button type="success">成功按钮</z-button>
         <z-button type="info">信息按钮</z-button>
@@ -17,7 +17,7 @@
     </z-card>
     <h3>禁用状态</h3>
     <z-card>
-      <div style="display:flex">
+      <div class="btn-group">
         <z-button type="primary" disabled>主要按钮</z-button>
         <z-button type="success" disabled>成功按钮</z-button>
         <z-button type="info" disabled>信息按钮</z-button>
@@ -83,5 +83,8 @@ export default {
 }
 </script>
 <style>
-
+.btn-group{
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>

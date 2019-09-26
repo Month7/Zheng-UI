@@ -14,6 +14,8 @@ import zSelect from './z-select/z-select'
 import zSelectOption from './z-select/z-option'
 import zCascader from './z-cascader'
 import zCascaderItem from './z-cascader-item'
+import zRow from './layout/z-row'
+import zCol from './layout/z-col'
 
 
 
@@ -30,7 +32,9 @@ const Components = {
   'z-carousel-item': zCarouselItem,
   'z-cascader': zCascader,
   'z-cascader-item': zCascaderItem,
-  'z-select-option': zSelectOption
+  'z-select-option': zSelectOption,
+  'z-row': zRow,
+  'z-col': zCol
 }
 
 // 判断是否是直接引入文件
@@ -79,5 +83,7 @@ export default {
   zSelect,
   zCarouselItem,
   zCascaderItem,
-  zSelectOption
+  zSelectOption,
+  zRow,
+  zCol
 }
