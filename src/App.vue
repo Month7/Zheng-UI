@@ -1,21 +1,20 @@
 <template>
   <div id="app">
- 
-    <Zcard></Zcard>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import HelloWorld from './components/HelloWorld.vue';
 
-
-import Zcard from './components/z-card';
-
-export default {
-  name: 'app',
+@Component({
   components: {
-    Zcard
+    HelloWorld,
   },
-}
+})
+export default class App extends Vue {}
 </script>
 
 <style>

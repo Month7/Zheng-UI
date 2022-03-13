@@ -59,7 +59,7 @@ export default {
   methods:{
     test(){
       this.$test();
-      // console.log(this.$model)
+
     }
   },
   data(){
