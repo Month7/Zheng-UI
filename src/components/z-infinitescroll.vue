@@ -33,8 +33,7 @@ export default {
   methods:{
     throttle(fn,time){
       var nowDate = new Date();
-      return function () {
-        console.log('??');
+      return function () {   
         var date = new Date();
         if(date - nowDate > time) {
           fn.call(this,arguments);
@@ -42,8 +41,7 @@ export default {
         }
       }
     },
-    debounce(fn,time){
-      console.log(fn);
+    debounce(fn,time){  
       var timer = null;
     
       return function () {

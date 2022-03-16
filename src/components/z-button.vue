@@ -3,40 +3,78 @@
     <button class="button" @click="emitClick" :class="[childType,allowed]" ><slot></slot></button>
   </div>
 </template>
-<script>
-export default {
-  name: 'z-button',
-  props: {
-    type: String,
-    disabled: Boolean
-  },
-  methods:{
-    emitClick(){
-      if(this.disabled){
-        return false;
-      } 
-      this.$emit('click')
+<script lang="tsx">
+import { Component, Prop, Vue } from 'vue-property-decorator'
+
+@Component({
+  name: 'z-button'
+})
+export default class Button extends Vue {
+  @Prop() private type!: string
+  @Prop() private disabled !: boolean
+
+  public emitClick () {
+    if(this.disabled){
+      return false;
+    } 
+    this.$emit('click')
+  }
+
+  get childType () {
+    switch(this.type) {
+      case 'primary': return 'button-primary';
+      case 'success': return 'button-success';
+      case 'info': return 'button-info';
+      case 'warn': return 'button-warn';
+      case 'danger': return 'button-danger';
+      default: return '';
     }
-  },
-  computed:{
-    childType() {
-      switch(this.type) {
-        case 'primary': return 'button-primary';
-        case 'success': return 'button-success';
-        case 'info': return 'button-info';
-        case 'warn': return 'button-warn';
-        case 'danger': return 'button-danger';
-        default: return '';
-      }
-    },
-    allowed(){
-      switch(this.disabled){
-        case true: return 'not-allowed';
-        case false: return '';
-        default: return '';
-      }
+  }
+
+  get allowed () {
+    switch(this.disabled){
+      case true: return 'not-allowed';
+      case false: return '';
+      default: return '';
     }
-  },
+  }
+
+
+
+  // export default {
+//   name: 'z-button',
+//   props: {
+//     type: String,
+//     disabled: Boolean
+//   },
+//   methods:{
+//     emitClick(){
+//       if(this.disabled){
+//         return false;
+//       } 
+//       this.$emit('click')
+//     }
+//   },
+//   computed:{
+//     childType() {
+//       switch(this.type) {
+//         case 'primary': return 'button-primary';
+//         case 'success': return 'button-success';
+//         case 'info': return 'button-info';
+//         case 'warn': return 'button-warn';
+//         case 'danger': return 'button-danger';
+//         default: return '';
+//       }
+//     },
+//     allowed(){
+//       switch(this.disabled){
+//         case true: return 'not-allowed';
+//         case false: return '';
+//         default: return '';
+//       }
+//     }
+//   },
+// }
 }
 </script>
 <style>

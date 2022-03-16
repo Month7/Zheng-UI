@@ -4,7 +4,7 @@ title: 'Button 组件'
 ---
 ## Button 组件
 <ClientOnly>
-<z-buttons/>
+<buttons />
 </ClientOnly>
 
 | 参数| 说明 | 类型 | 可选值 | 默认值 |
